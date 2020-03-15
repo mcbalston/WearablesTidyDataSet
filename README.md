@@ -8,12 +8,12 @@ From the source data provided, I identified the following files which will be us
 Training data (70% of subjects)
 1. X_train.txt - test data with one row per observation, 561 columns containing features
 2. subject_train.txt - a vector containing the subject ids for each test observation.  Has the same number of rows as #1
-3: y_train.txt - a vector containing the activity label ids for each test observation.  Has the same number of rows as #1
+3. y_train.txt - a vector containing the activity label ids for each test observation.  Has the same number of rows as #1
 
 Test data (30% of subjects)
 1. X_test.txt - test data with one row per observation, 561 columns containing features
 2. subject_test.txt - a vector containing the subject ids for each test observation.  Has the same number of rows as #1
-3: y_test.txt - a vector containing the activity label ids for each test observation.  Has the same number of rows as #1
+3. y_test.txt - a vector containing the activity label ids for each test observation.  Has the same number of rows as #1
 
 activity_labels.txt - a two column data set with key:value pairs.  The 'key' in this case is a numeric value corresponding to the number used for the activity in y_train.txt and x_train.txt.  The 'value' is a string providing the name of the activity.
 
