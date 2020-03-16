@@ -72,7 +72,7 @@ This transformation is achieved efficiently by 'piping' the data through each st
 This final data set is 'Tidy' because each row represents an observation (defined by a single subject and single activity), while each column is a variable.
 
 The final tidy data can be loaded into R using the script:
-'read.table("tidy-data.txt", header=TRUE)'
+`read.table("tidy-data.txt", header=TRUE)`
 
 ## References
 [Wickham, Hadley. "Tidy Data." *Journal of Statistical Software.* American Statistical Association. August 2014. Date Accessed: 16 March 2020.](https://www.jstatsoft.org/index.php/jss/article/view/v059i10/v59i10.pdf)
