@@ -19,8 +19,25 @@ activity_labels.txt - a two column data set with key:value pairs.  The 'key' in 
 
 features.txt - a two column data sey with 561 key:value pairs.  The 'key' is the numeric value of the feature.  It is assumed that these numbers correspond to the columns in X_test.txt and X_train.txt. The 'value' is the name of the feature.
 
+# The script
 
-# STEP 1
+The script first downloads the data and extracts it locally.  It then loads the files identified above into the following R variables:
+
+Source File | R Object name | R Object Class | Dimensions
+------------|---------------|----------------|------------
+X_test.txt  | X_test  | matrix | 2947, 561
+subject_test.txt | subject_test | matrix | 2947, 1
+y_test.txt | y_test | matrix | 2947,2
+X_train.txt | X_train | matrix | 2947, 561
+subject_train.txt | subject_train | matrix | 2947, 1
+y_train.txt | y_train | matrix | 2947, 2
+activity_labels.txt | activity_labels | matrix | 6, 2
+features.txt | features | matrix | 561, 2
+
+
+
+
+## STEP 1
 Merges the training and the test sets to create one data set.
 
 
@@ -28,18 +45,18 @@ First we add the subject and activity columns to both the train and test data se
 
 Next we stack the two datasets together.
 
-# STEP 2
+## STEP 2
 Extracts only the measurements on the mean and standard deviation for each measurement.
 
 I use grep() to identify which features are mean and std measures.  I assume that only features including the text 'mean()' or 'std()' are required since the 
 Having identified the feature numbers, I extract the corresponding columns from the dataset.
 
-# STEP 3
+## STEP 3
 Uses descriptive activity names to name the activities in the data set
 
 There are several ways the numeric values for activity could be converted into the string representation, but I chose to provide the string values as factor labels, since the column is best represented as a factor variable.
 
-# STEP 4
+## STEP 4
 Appropriately labels the data set with descriptive variable names.
 
 Names for the features were taken from the original file features.txt, extracting the required values using the vector obtained using the grep() function in step 2.
