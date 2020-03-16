@@ -25,20 +25,20 @@ The script first downloads the data and extracts it locally.  It then loads the 
 
 Source File | R Object name | R Object Class | Dimensions
 ------------|---------------|----------------|------------
-X_test.txt  | X_test  | matrix | 2947, 561
-subject_test.txt | subject_test | matrix | 2947, 1
-y_test.txt | y_test | matrix | 2947,2
-X_train.txt | X_train | matrix | 2947, 561
-subject_train.txt | subject_train | matrix | 2947, 1
-y_train.txt | y_train | matrix | 2947, 2
-activity_labels.txt | activity_labels | matrix | 6, 2
-features.txt | features | matrix | 561, 2
+X_test.txt  | X_test  | data.frame | 2947, 561
+subject_test.txt | subject_test | data.frame | 2947, 1
+y_test.txt | y_test | data.frame | 2947,2
+X_train.txt | X_train | data.frame | 2947, 561
+subject_train.txt | subject_train | data.frame | 2947, 1
+y_train.txt | y_train | data.frame | 2947, 2
+activity_labels.txt | activity_labels | data.frame | 6, 2
+features.txt | features | data.frame | 561, 2
 
-
+Next, the script addresses each of the steps descripted in the assignment instructions in order...
 
 
 ## STEP 1
-Merges the training and the test sets to create one data set.
+_Merges the training and the test sets to create one data set._
 
 
 First we add the subject and activity columns to both the train and test data sets.  We also add a column to indicate if the data is taken from the train or the test data.
@@ -46,23 +46,23 @@ First we add the subject and activity columns to both the train and test data se
 Next we stack the two datasets together.
 
 ## STEP 2
-Extracts only the measurements on the mean and standard deviation for each measurement.
+_Extracts only the measurements on the mean and standard deviation for each measurement._
 
 I use grep() to identify which features are mean and std measures.  I assume that only features including the text 'mean()' or 'std()' are required since the 
 Having identified the feature numbers, I extract the corresponding columns from the dataset.
 
 ## STEP 3
-Uses descriptive activity names to name the activities in the data set
+_Uses descriptive activity names to name the activities in the data set_
 
 There are several ways the numeric values for activity could be converted into the string representation, but I chose to provide the string values as factor labels, since the column is best represented as a factor variable.
 
 ## STEP 4
-Appropriately labels the data set with descriptive variable names.
+_Appropriately labels the data set with descriptive variable names._
 
 Names for the features were taken from the original file features.txt, extracting the required values using the vector obtained using the grep() function in step 2.
 
-# STEP 5
-From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+## STEP 5
+_From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject._
 
 Using the dplyr package, I first grouped the data by activity and subject and then summarised, using mean to obtain the average for each of the remaining columns (the 'variables').
 
@@ -70,6 +70,7 @@ This final data set is 'Tidy' because...
 
 
 The final tidy data can be loaded into R using the script:
+'read.table("tidy-data.txt", header=TRUE)'
 
-
-
+## References
+[Wickham, Hadley. "Tidy Data." *Journal of Statistical Software.* American Statistical Association. August 2014. Date Accessed: 16 March 2020.](https://www.jstatsoft.org/index.php/jss/article/view/v059i10/v59i10.pdf)
