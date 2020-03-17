@@ -1,16 +1,21 @@
 ## This script demonstrates the collection and processing of a data set with the objective of forming a 
 ## 'Tidy' data set as per Wickham 2004 see README.md for a detailed explanation of this script.
 
-## Download zip file to temp files folder
+## Check if required study files are already in the working directory. Download and unzip if not.
+if(!file.exists("UCI HAR Dataset")) {
 
-temp.file <- tempfile()
-url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-download.file(url, temp.file, method="curl")
+        print("Downloading source data set...")
+        ## Download zip file to temp files folder
 
-# Unzip to working directory
-
-unzip(temp.file)
-
+        temp.file <- tempfile()
+        url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+        download.file(url, temp.file, method="curl")
+        
+        # Unzip to working directory
+        
+        unzip(temp.file)
+}
+        
 # Load required files.
 # The normalizePath() function is used to try to ensure that the code can be run on any platform.
 # The test platform was Windows.
