@@ -1,5 +1,7 @@
 # WearablesTidyDataSet
-Code to create a Tidy data set from smartphone activity data.  This code is for the project assignment of the Johns Hopkins Coursera course on Getting and Cleaning Data from the Data Science Specialization.
+Code to create a Tidy data set<sup>[1](#footnote1)</sup> from smartphone activity data.  This code is for the project assignment of the Johns Hopkins Coursera course on Getting and Cleaning Data from the Data Science Specialization.
+
+The source data is taken from a study on Human Activity Recognition Using Smartphones<sup>[2](#footnote1)</sup>
 
 
 # Source data
@@ -72,9 +74,14 @@ This transformation is achieved efficiently by 'piping' the data through each st
 This final data set is 'Tidy' because each row represents an observation (defined by a single subject and single activity), while each column is a variable.
 
 The final tidy data can be loaded into R using the script:
+
 `read.table("tidy-data.txt", header=TRUE)`
 
+
 ## References
-[Wickham, Hadley. "Tidy Data." *Journal of Statistical Software.* American Statistical Association. August 2014. Date Accessed: 16 March 2020.](https://www.jstatsoft.org/index.php/jss/article/view/v059i10/v59i10.pdf)
+<a name="footnote1">1:</a> [Wickham, Hadley. "Tidy Data." *Journal of Statistical Software.* American Statistical Association. August 2014. Date Accessed: 16 March 2020.](https://www.jstatsoft.org/index.php/jss/article/view/v059i10/v59i10.pdf)
+
+<a name="footnote2">2:</a>  [Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. A Public Domain Dataset for Human Activity Recognition Using Smartphones. 21th European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning, ESANN 2013. Bruges, Belgium 24-26 April 2013.](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
+
 
 Also thanks to David Hood for his extremely useful [advice](https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/) on this assigment...and to Philippe Alcouffe for directing me to it.
