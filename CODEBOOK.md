@@ -1,8 +1,8 @@
 # Variables within TidyData.txt
 
-*All variables within TidyData.txt are derived from the original data set included in this <a name="myfootnote1">study<sup>1</sup></a>.  The description of the variables within that data set provides further explanation.*
+*All variables within TidyData.txt are derived from the original data set included in this study<sup>[1](#myfootnote1)</sup>.  The description of the variables within that data set provides further explanation.*
 
-The data set contains 180 observations, one for each combination of 30 subjects and 6 activities.  For each observation, 66 variables are given, each of which is the average value of the corresponding variable in the original data set, for **the given subject and activity**.
+TidyData.txt contains 180 observations, one for each combination of 30 subjects and 6 activities.  For each observation, 66 variables are given, each of which is the average value of the corresponding variable in the original data set, for **the given subject and activity**.
 
 Position | Name | Description
 ---------|------|------------
@@ -22,4 +22,6 @@ tBodyAcc-mean()-X| tBodyAcc.mean.X
 tBodyAccJerkMag-std() | tBodyAccJerkMag.std
 
 
-<sup>[1](#myfootnote1)</sup>[Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. A Public Domain Dataset for Human Activity Recognition Using Smartphones. 21th European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning, ESANN 2013. Bruges, Belgium 24-26 April 2013.](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
+---
+
+<a name="myfootnote1"><sup>1</sup></a>  [Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. A Public Domain Dataset for Human Activity Recognition Using Smartphones. 21th European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning, ESANN 2013. Bruges, Belgium 24-26 April 2013.](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
