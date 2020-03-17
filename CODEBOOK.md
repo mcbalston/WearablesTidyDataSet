@@ -1,6 +1,6 @@
-#Variables within TidyData.txt
+# Variables within TidyData.txt
 
-*All variables within TidyData.txt are derived from the original data set included in this study<a name="myfootnote1">1</a>.  The description of the variables within that data set provides further explanation.*
+*All variables within TidyData.txt are derived from the original data set included in this <a name="myfootnote1">study<sup>1</sup></a>.  The description of the variables within that data set provides further explanation.*
 
 The data set contains 180 observations, one for each combination of 30 subjects and 6 activities.  For each observation, 66 variables are given, each of which is the average value of the corresponding variable in the original data set, for **the given subject and activity**.
 
@@ -8,12 +8,14 @@ Position | Name | Description
 ---------|------|------------
 1 | ActivityName | One of 6 string values describing the activity undertaken
 2 | SubjectID | An integer (1-30) indicating the subject
-3..68 | *various* | The mean value of the corresponding variable in the original data set
+3..68 | *various<sup>+</sup>* | The mean value of the corresponding variable in the original data set
 
-* The variables in TidyData.txt are derived from the original data set with two modifications:
+<sup>+</sup> The variables in TidyData.txt are derived from the original data set with two modifications:
 1. Parenthesis are removed
 2. Dashes are changed to dots
-e.g.
+
+For example:
+
 Original Data set | TidyData.txt
 ------------------|-------------
 tBodyAcc-mean()-X| tBodyAcc.mean.X
